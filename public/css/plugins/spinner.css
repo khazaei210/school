@@ -1,0 +1,24 @@
+@font-face {
+  font-family: BYekan;
+  src: url(../assets/fonts/BYekan.eot) format('eot'),
+  url(../assets/fonts/BYekan.woff) format('woff'),
+  url(../assets/fonts/BYekan.ttf) format('truetype')
+}
+/* [THE LOADING SPINNER] */
+#spinner-front{
+  position: fixed;
+  visibility: visible;
+  opacity: 0.7;
+  width: 100% !important;
+  min-height: 800px;
+  transition: all 1s;
+  display: none;
+}
+#spinner-front{
+  z-index: 999;
+  color: #000;
+  text-align: center;
+  background-color: grey;
+  font-family: BYekan;
+  direction: rtl;
+}

@@ -1,0 +1,147 @@
+@font-face {
+    font-family: BYekan;
+    src: url(../assets/fonts/BYekan.eot) format('eot'),
+    url(../assets/fonts/BYekan.woff) format('woff'),
+    url(../assets/fonts/BYekan.ttf) format('truetype')
+}
+.container {
+    direction: rtl;
+    font-family: BYekan;
+    font-size: 20px;
+    width: 50%;
+    margin: 30px auto;
+    padding: 30px;
+
+}
+.container form {
+    line-height: 20px;
+    border: 1px solid #7986CB;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.container  .brief {
+    font-size: 22px;
+    color: #B00020;
+    border: 1px solid #B00020;
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+
+}
+.container form label {
+    width: 200px;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #555;
+
+}
+.container form input[type=text], .container form input[type=password] {
+    margin-bottom: 20px;
+    padding: 5px;
+    font-family: BYekan;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 200px;
+    color: #555;
+   
+}
+.container form input[type=tel] {
+    margin-bottom: 20px;
+    padding: 5px;
+    font-family: BYekan;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 200px;
+    color: #555;
+}
+.container form input[type=number] {
+    margin-bottom: 20px;
+    padding: 5px;
+    font-family: BYekan;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 70px;
+    color: #555;
+    
+}
+.container form select {
+    margin-bottom: 20px;
+    padding: 5px 5px 8px 5px;
+    font-family: BYekan;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 130px;
+    color: #555;
+    
+}
+.container form textarea {
+    width: 300px;
+    height: 100px;
+    vertical-align: top;
+    border-radius: 5px;
+    color: #555;
+}
+
+.container form input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 35px;
+    color: #555;
+    
+}
+.container form input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    border: 2px solid #555555;
+    border-radius: 3px;
+    background-color: white;
+}
+.container form input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+}
+
+.container form button {
+    padding: 10px 30px;
+    background-color: #00ACC1;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    color: white;
+    font-family: BYekan;
+    margin-top: 40px;
+    font-weight: bold;
+
+}
+.container form p {
+    color: #2E7D32;
+    font-weight: bold;
+}
+.container h2 {
+	color:  red;
+	font-size: 16px;
+}
+.container a{
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+.container a:hover {
+    cursor: pointer;
+}

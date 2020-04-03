@@ -1,0 +1,6 @@
+node_modules/
+ref/
+test.html
+mongodb.bat
+run.bat
+src/config.env

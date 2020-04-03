@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="menu">
+    <head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="google" value="notranslate"/>
+    <title>داشبورد معلم</title>
+    <link rel="stylesheet" href="../css/plugins/spinner.css">
+    <link rel="stylesheet" type="text/css" href="../css/adminPage.css">
+    <link rel="stylesheet" type="text/css" href="../css/teacherHome.css">
+    <link rel="stylesheet" type="text/css" href="../css/plugins/all.css">
+    {{!-- **********felora TEXTBOX EDITOR**************  --}}
+    <link href="../css/plugins/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../js/plugins/froala_editor.pkgd.min.js"></script>
+    <link href="../css/plugins/froala_style.min.css" rel="stylesheet" type="text/css" />
+    {{!-- **************END FLORA EDITOR****************** --}}
+    <link rel="stylesheet" href="../css/plugins/persian-datepicker.css"/>
+    <script src="../js/plugins/jquery.js"></script>
+    <script src="../js/plugins/persian-date.js"></script>
+    <script src="../js/plugins/persian-datepicker.js"></script>
+    <script src="../sweetalert2/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="../sweetalert2/dist/sweetalert2.min.css"> 
+    </head>
+    <body>
+        <div id="spinner-front">
+            <img src="../img/ajax-loader.gif"/><br>
+            لطفا صبر کنید ...
+        </div>
+        <nav class="main-menu">
+
+        <div>
+            <a class="logo" href="#"></a> 
+        </div> 
+        <div class="settings">
+            <img class="profilePic" src="../img/default-profile.png" >
+        </div>
+        <div class="scrollbar" id="style-1">    
+        <ul class="menu">
+            <li class="dashbord__section active-menu">                                   
+                <a href="#">
+                <i class="fas fa-id-card-alt fa fa-lg"></i>
+                <span class="nav-text">پروفایل</span>
+                </a>
+            </li>   
+
+            <li class="questionDesign__section">                                 
+                <a href="#">
+                <i class="fas fa-pen-alt fa fa-lg"></i>
+                <span class="nav-text">طرح سوال</span>
+                </a>
+            </li>   
+        
+            <li class="questionSharing__section">                                 
+                <a href="#">
+                <i class="fas fa-share-alt fa fa-lg"></i>
+                <span class="nav-text">اشتراک گذاری سوال</span>
+                </a>
+            </li>
+            <li class="questionEdit__section">                           
+                <a href="#">
+                <i class="fas fa-edit fa fa-lg"></i>
+                <span class="nav-text">ویرایش و حذف سوال</span>
+                </a>
+            </li> 
+        </ul>
+        
+        
+        <ul class="logout">
+            <li>
+                <a href="#">
+                    <i class="fa fa-lg fas fa-sign-out-alt"></i>
+                    <span class="nav-text">
+                        خروج 
+                    </span> 
+                </a>
+            </li>  
+        </ul>
+        </div>
+        </nav>
+        <div class="content">
+            <div class="profile">
+                <div class="teacherChangePassword">
+                    <a>تغییر رمز عبور <i class="fas fa-key"></i></a>
+                </div>
+                <form class="freezForm teacherInfo">
+                    <label>نام</label>
+                    <input type="text" name="firstName">
+                    <br>
+                    <label>نام خانوادگی</label>
+                    <input type="text" name="lastName">
+                    <br>
+                    <label>کد ملی</label>
+                    <input type="text" name="nationalID">
+                     <br>                  
+                    <label>شماره تلفن</label>
+                    <input type="text" name="mobileNumber">
+                    <br>
+                    <div class="pics">
+                        <label>تغییر عکس پروفایل: </label>
+                        <input type="file" accept=".gif, .jpg, .jfif, .png, .jpeg" name="image" required>
+                    </div>
+                    <button class="submit-btn" type="submit">ارسال</button>
+                </form>
+                <form class="freezForm teacherCourse">
+                    <p>درس های سال جاری :</p>
+                    <div>
+
+                    </div>
+                </form>
+            </div>
+            <div class="questionDesign">
+                <div class="courseSelect">
+                    <form class="openForm">
+                        <label class="label200">انتخاب درس برای طرح سوال :</label>
+                        <select>
+
+                        </select>
+                        <p></p>
+                    </form>
+
+                </div>
+                <form class="openForm addQuestion">
+                    <p>شما در حال طراحی سوال برای درس <span></span> هستید</p>
+                    <label>سوال :</label>
+                    <textarea name="question" cols="100" rows="3" required></textarea>
+                    <br>
+                    
+                    <label>درجه سحتی سوال :</label>
+                    <select class="difficulty">
+                        <option value="1" selected>راحت</option>
+                        <option value="2" >متوسط</option>
+                        <option value="3">سخت</option>
+                        <option value="4">خیلی سخت</option>
+                    </select>
+                    <br>
+                    <label>انتخاب نوع سوال :</label>
+                    <select class="questionTypes">
+                        <option value="2" selected>چهار گزینه ای</option>
+                        <option value="1" >تشریحی</option>
+                        <option value="3">بلی / خیر</option>
+                    </select>
+                    <div class="desciptive hide">
+                        <label>پاسخ :</label>
+                        <textarea name="answer" cols="100" rows="3"></textarea>
+                    </div>
+                    <div class="yes-no hide">
+                        <label>پاسخ :</label>
+                        <select>
+                            <option value="true" selected>بلی</option>
+                            <option value="false">خیر</option>
+                        </select>
+                    </div>
+                    <div class="multiChioce show">
+                        <label>گزینه الف :</label>
+                        <input type="text" name="choice1">
+                        <br>
+                        <label>گزینه ب :</label>
+                        <input type="text" name="choice2">
+                        <br>
+                        <label>گزینه ج :</label>
+                        <input type="text" name="choice3">
+                        <br>
+                        <label>گزینه د :</label>
+                        <input type="text" name="choice4">
+                        <br>
+                        <label>پاسخ :</label>
+                        <select>
+                            <option value="1" selected>الف</option>
+                            <option value="2">ب</option>
+                            <option value="3">ج</option>
+                            <option value="4">د</option>
+                        </select>
+                    </div>
+                    <button type="submit">ثبت سوال</button>
+                </form>
+
+            </div>
+            <div class="questionSharing">
+                <div class="questionsFilter">
+                    <div class="courseSelect">
+                    <form class="openForm">
+                        <label class="label400">درس مورد نظر را برای نمایش سوالات انتخاب نمایید :</label>
+                        <select>
+
+                        </select>
+                        <p></p>
+                    </form>
+
+                </div>
+
+                    <form class="openForm questionSelect">
+                        <p>سوالات مربوط به درس : <span></span></p>
+                        <div>
+                            <table>
+                            </table>
+                        </div>
+                        <button  class="publishBTN" id="pub">انتشار</button>
+                        <button  class="unPublishBTN" id="unpub">عدم انتشار</button>
+                    </form>
+                    
+                </div>
+            </div>
+            <div class="questionEdit">
+                <div class="questionEditDel">
+                    <div class="courseSelect">
+                    <form class="openForm">
+                        <label class="label400">درس مورد نظر را برای نمایش سوالات انتخاب نمایید :</label>
+                        <select>
+
+                        </select>
+                        <p></p>
+                    </form>
+                    </div>
+                    <form class="openForm questionSelectForEdit">
+                        <p>سوالات مربوط به درس : <span></span></p>
+                        <div>
+                            <table>
+                            </table>
+                        </div>
+                        <button class="delQuestion">حذف سوال</button>
+                    </form>
+                    
+                </div>
+                <form class="openForm editQuestion">
+                    <p>شما در حال تغییر سوال برای درس <span></span> هستید</p>
+                    <label>سوال :</label>
+                    <textarea name="question" cols="100" rows="3" required></textarea>
+                    <br>
+                    
+                    <label>درجه سحتی سوال :</label>
+                    <select class="difficulty">
+                        <option value="1" selected>راحت</option>
+                        <option value="2" >متوسط</option>
+                        <option value="3">سخت</option>
+                        <option value="4">خیلی سخت</option>
+                    </select>
+                    <br>
+                    <label>انتخاب نوع سوال :</label>
+                    <select class="questionTypes">
+                        <option value="2" selected>چهار گزینه ای</option>
+                        <option value="1" >تشریحی</option>
+                        <option value="3">بلی / خیر</option>
+                    </select>
+                    <div class="desciptive">
+                        <label>پاسخ :</label>
+                        <textarea name="answer" cols="100" rows="3"></textarea>
+                    </div>
+                    <div class="yes-no">
+                        <label>پاسخ :</label>
+                        <select>
+                            <option value="true" selected>بلی</option>
+                            <option value="false">خیر</option>
+                        </select>
+                    </div>
+                    <div class="multiChioce">
+                        <label>گزینه الف :</label>
+                        <input type="text" name="choice1">
+                        <br>
+                        <label>گزینه ب :</label>
+                        <input type="text" name="choice2">
+                        <br>
+                        <label>گزینه ج :</label>
+                        <input type="text" name="choice3">
+                        <br>
+                        <label>گزینه د :</label>
+                        <input type="text" name="choice4">
+                        <br>
+                        <label>پاسخ :</label>
+                        <select>
+                            <option value="1" selected>الف</option>
+                            <option value="2">ب</option>
+                            <option value="3">ج</option>
+                            <option value="4">د</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="update">ثبت سوال</button>
+                    <button type="reset" class="cancel">انصراف</button>
+                </form>
+            </div>
+        </div>
+        <script src="../js/plugins/axios.min.js"></script>
+        <script src="../js/plugins/mustache.min.js"></script>
+        <script src="../js/plugins/felora.js"></script>
+        <script src="../js/plugins/persianDate.js"></script>
+        <script src="../js/plugins/spinner.js"></script>
+        <script src="../js/teacherHome.js"></script>
+        <script src="../js/plugins/chart.js"></script>
+    
+
+    </body>
+</html>

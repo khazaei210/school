@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/plugins/spinner.css">
+    <script src="../sweetalert2/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="../sweetalert2/dist/sweetalert2.min.css"> 
+
+    <title>ورود معلم</title>
+</head>
+<body>
+    <div id="spinner-front">
+        <img src="../img/ajax-loader.gif"/><br>
+        لطفا صبر کنید ...
+    </div>
+   <div class="container">
+	<h1>ورود معلم</h1>
+    <form class="form1">
+    	<input type="text" name="username" placeholder="نام کابری" required="required" />
+        <br>
+        <input type="password" name="password" placeholder="کلمه عبور" required="required" />
+        <br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">ورود</button>
+        <a href="#" onclick="forgetPassword()">فراموشی رمز عبور</a>
+    </form>
+</div>
+<script src="../js/plugins/axios.min.js"></script>
+<script src="../js/plugins/spinner.js"></script>
+<script src="../js/teacherLogin.js"></script>
+</body>
+</html>

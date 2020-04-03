@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/preEnroll.css">
+    <link rel="stylesheet" href="./css/plugins/spinner.css">
+    <link rel="icon" href="img/preEnroll/icon.png" type="image/png">
+    <script src="./sweetalert2/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="./sweetalert2/dist/sweetalert2.min.css"> 
+    <title>پیش ثبت نام</title>
+</head>
+<body>
+    <div id="spinner-front">
+        <img src="../img/ajax-loader.gif"/><br>
+        لطفا صبر کنید ...
+     </div>
+    <div class="container">
+        <p class="brief">
+            لطفا اطلاعات خواسته شده را با دقت وارد کنید.
+            <br>
+              نتیجه درخواست شما به شماره تلفن وارد شده در فرم زیر پیامک خواهد شد.
+        </p>
+        <form class="preEnroll">
+            <label>نام:</label>
+            <input name="name" type="text" required>
+            <br>
+            <label>نام خانوادگی:</label>
+            <input name="family" type="text" required>
+            <br>
+            <label> کد ملی :</label>
+            <input name="nationalID" type="text" required>
+            <br>
+            <label>موبایل:</label>
+            <input name="mobile" type="tel" placeholder="09xxxxxxxxx" required>
+            <br>
+            <label>محل تحصیل سال قبل:</label>
+            <input name="lastSchool" type="text" required>
+            <br>
+            <label>معدل سال قبل:</label>
+            <input name="lastYearMark" type="text" required></input>
+            <br>
+            <label>پایه تحصیلی:</label>
+            <select name="level" >
+                <option value="اول" selected>اول </option>
+                <option value="دوم">دوم</option>
+                <option value="سوم">سوم </option>
+                <option value="چهارم" >چهارم </option>
+                <option value="پنجم">پنجم  </option>
+                <option value="ششم">ششم </option>
+            </select>
+            <br>
+            <label>شغل پدر:</label>
+            <input name="fatherJob" type="text" required>
+            <br>
+            <label>مدرک تحصیلی پدر:</label>
+            <select name="fatherLicense" >
+                <option value="زیر دیپلم">زیر دیپلم</option>
+                <option value="دیپلم">دیپلم</option>
+                <option value="فوق دیپلم">فوق دیپلم</option>
+                <option value="لیسانس" selected>لیسانس </option>
+                <option value="فوق لیسانس">فوق لیسانس </option>
+                <option value="دکتری">دکتری </option>
+            </select>
+            <br>
+            <label>شعل مادر:</label>
+            <input name="motherJob" type="text" required>
+            <br>
+            <label>مدرک تحصیلی مادر:</label>
+            <select name="motherLicense" >
+                <option value="زیر دیپلم">زیر دیپلم</option>
+                <option value="دیپلم">دیپلم</option>
+                <option value="فوق دیپلم">فوق دیپلم</option>
+                <option value="لیسانس" selected>لیسانس </option>
+                <option value="فوق لیسانس">فوق لیسانس </option>
+                <option value="دکتری">دکتری </option>
+            </select>
+            <br>
+            <label>چندمین فرزند خانواده:</label>
+            <input name="childNum" type="number" min="0" max="10" required>
+            <br>
+            <label>آیا ولی جانباز است؟</label>
+            <input name="isSacrifice" type="checkbox">
+            <br>
+            <button type="submit">ارسال</button>
+            <img src="../img/spinner/spinner.gif" class="spinner hide">
+            <p></p>
+        </form>
+
+    </div>
+    <script src="../assets/axios.min.js"></script>
+    <script src="../js/plugins/spinner.js"></script>
+    <script src="../js/preEnroll.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,329 @@
+@font-face {
+    font-family: BYekan;
+    src: url(../assets/fonts/BYekan.eot) format('eot'),
+    url(../assets/fonts/BYekan.woff) format('woff'),
+    url(../assets/fonts/BYekan.ttf) format('truetype')
+}
+
+/************************ for studentHome.hbs ******************************/  
+/* ****************************** hide sections *********************************/
+.content .enroll , .content .payment, .content .question {
+    display: none;
+}
+
+/******************************* profile section *************************/
+.content .profile {
+    border: 2px solid #FFB74D;
+    padding: 30px 20px;
+}
+.content .profile .alert {
+    color: #FF6D00;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-right: 30px;
+}
+.content .profile label {
+    margin-right: 30px;
+    width: 160px;
+    font-size: 15px;
+    
+}
+.content .profile input {
+    margin-left: 50px;
+    font-size: 15px;
+    font-family: BYekan;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+.content .profile input[type="text"] {
+    height: 20px;
+    width: 140px;
+    border: 1px solid #ccc;
+}
+.content .profile button {
+    margin-right: 30px;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #4FC3F7;
+    color: #0277BD;
+    border: none;
+}
+.content .profile #submit {
+    color: #689F38;
+}
+
+#picd, #passId, #natiId {
+    color: #B00020;
+}
+.content .profile .information .docs #img1, .content .profile .information .docs #img2, .content .profile .information .docs #img3{
+    display: none;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+/******************************* enroll section *************************/
+.content .enroll p {
+    color: #f44336;
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 30px;
+}
+.enroll__form {
+    padding: 30px;
+    margin-top: 20px;
+    border: 2px solid #00bcd4;
+  
+}
+.enroll__form input {
+    margin-left: 50px;
+    font-size: 17px;
+    font-family: BYekan;
+    padding: 3px 5px;
+    border-radius: 5px;
+    height: 20px;
+    width: 140px;
+    border: none;
+    margin-bottom: 10px;
+    
+}
+.enroll__form select {
+    padding: 3px;
+    border-radius: 5px;
+    font-family: BYekan;
+}
+
+.enroll__form button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-size: 15px;
+    font-family: BYekan;
+    font-weight: bold;
+    color: #0277bd;
+    background-color: #81d4fa;
+    border: none;
+}
+.enroll__form button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+/******************************payment section********************************/
+.content .payment .payment__section>p {
+    color: #f4a836;
+    font-size: 15px;
+    font-weight: bold;
+    width: 400px;
+    text-align: justify;
+    padding: 10px 30px;
+    border: 1px solid #f4a836;
+}
+.payment__section {
+    display: inline-block;
+}
+.payment__form {
+    padding: 30px;
+    margin-top: 20px;
+    border: 2px solid #00bcd4;
+    width: 400px;
+}
+
+.payment__form label {
+    width: 140px;
+}
+
+.payment__form p {
+    color: #689F38;
+}
+.payment__form input {
+    margin-left: 50px;
+    font-size: 14px;
+    font-family: BYekan;
+    padding: 3px 5px;
+    border-radius: 5px;
+    height: 20px;
+    width: 140px;
+    border: none;
+    margin-bottom: 10px;
+    color: #555;
+    font-weight: bold;
+    
+}
+.payment__form input[name="cost"] {
+    width: 130px;
+    padding: 6px;
+    border: 1px solid #aaa !important;
+    direction: ltr;
+}
+.payment__form input[type="file"] {
+    font-size: 13px;
+    padding: 5px;
+    color: #333;
+    width: 175px;
+}
+.payment__form select {
+    padding: 3px;
+    border-radius: 5px;
+    font-family: BYekan;
+}
+
+.payment__form button {
+    padding: 8px 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-size: 15px;
+    font-family: BYekan;
+    font-weight: bold;
+    color: #0277bd;
+    background-color: #81d4fa;
+    border: none;
+}
+.payment__form button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.payment__form .cost1, .payment__form .cost2 {
+    display: inline-block;
+    width: auto !important;
+    font-size: 17px;
+    color: #558B2F;
+    
+
+}
+.payment__form .cost2 {
+    padding-right: 3px !important;
+}
+.payment__form .cost1 {
+    margin-right: 150px !important;
+    padding-left: 3px !important;
+}
+.payment .payment__chart {
+    display: inline-block;
+    width: 500px;
+    vertical-align: top;
+    padding-top: 30px;
+}
+.payment table {
+    margin-right: 40px;
+    margin-top: 30px;
+    border: 1px solid beige;
+    
+}
+.payment table th {
+    color: #555;
+    font-weight: bold;
+    width: 100px;
+    padding: 4px;
+    text-align: center;
+
+}
+.payment table td {
+    color: #FF6D00;
+    padding: 4px;
+    text-align: center;
+
+}
+.payment table tr:nth-child(2n) {
+    background-color: aliceblue;
+}
+.payment .summary {
+    width: 442px;
+    margin-right: 40px;
+    margin-top:30px;
+    border: 1px dashed rgb(189, 236, 78);
+    box-sizing: border-box;
+
+}
+.payment #paid {
+    color: green;
+    width:45%;  
+    box-sizing: border-box;
+    font-size: 13px;
+}
+.payment #remain {
+    color: orange;
+    width: 45%;
+    box-sizing: border-box;
+    font-size: 13px;
+
+}
+.label200 {
+    width: 200px;
+}
+.freezForm {
+    border: 2px solid black;
+    padding: 10px;
+    margin-top: 20px;
+    color: #444;
+}
+.freezForm input {
+    margin-left: 50px;
+    font-size: 16px;
+    font-family: BYekan;
+    border-radius: 5px;
+    width: 250px;
+    border: none;
+    margin-bottom: 10px;
+    color: #aaa;
+    
+    vertical-align: bottom;
+}
+.freezForm p {
+    font-size: 18px;
+    font-weight: bold;
+    color: teal;
+}
+.freezForm label {
+    display: inline-block;
+    width: 70px;
+    font-family: BYekan;
+    vertical-align: top;
+
+}
+.freezForm select {
+    padding: 3px;
+    border-radius: 5px;
+    font-family: BYekan;
+}
+.freezForm textarea {
+    border: 1px solid #333;
+    padding: 5px;
+    font-family: BYekan;
+    display: inline-block;
+    border-radius: 6px;
+}
+.freezForm hr {
+    border: 1px solid gray;
+    margin-bottom: 5px !important;
+}
+.questionNum {
+    color: #558B2F;
+    font-weight: bold;
+    width: 100px !important;
+    
+}
+.questionTilte {
+    color: #FF6D00;
+}
+.questionAnswer {
+    color: blue;
+    cursor: pointer;
+    background-color: lightblue;
+    padding: 3px 3px;
+    border-radius: 6px;
+    text-align: center;
+}
+.answerValue {
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+}
+.hide {
+    display: none !important;
+}
+.questionContainer .desc {
+    color: saddlebrown;
+}

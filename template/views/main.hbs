@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>  دبستان غیرانتفاعی سینا</title>
+    <link rel="stylesheet" href="assets/reset.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <script type="text/javascript" src="assets/jquery.min.js"></script>
+
+    <!-- Fraction SLider Files-->
+    <link href="assets/fractionslider/css/fractionslider.css" rel="stylesheet" />
+    <script type="text/javascript" src="assets/fractionslider/jquery.fractionslider.js"></script>
+
+
+    <!-- WOW : http://mynameismatthieu.com/WOW/docs.html-->
+    <link rel="stylesheet" href="assets/wow/css/libs/animate.css" type="text/css">
+    <script type="text/javascript" src="assets/wow/dist/wow.min.js"></script>
+    <script>new WOW().init();</script>
+
+
+</head>
+<body>
+<div id="main">
+    <header>
+        <nav>
+            <div class="fwc" id="topMenu">
+                <ul>
+                    <li><a href="#top" class="active">خانه</a></li>
+                    <li><a href="#row1">درباره ما</a></li>
+                    <li><a href="#row2">اخبار</a></li>
+                    <li><a href="#row3">کادر مدرسه</a></li>
+                    <li><a href="#row4">تماس با ما</a></li>
+                    
+                <button class="adminBtn homeBtn">ورود مدیر</button>
+                <button class="studentBtn homeBtn">ورود دانش آموز</button>
+                <button class="teacherBtn homeBtn">ورود معلم</button>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Slider -->
+    <section class="sliderWrapper" id="top">
+        <div class="fwc" id="slider">
+            <div class="slide">
+                <img data-position="120,600" data-in="topLeft" data-out="top" data-delay="100" src="assets/images/logo-big.png"/>
+                <div class="slidetext" data-in="right" data-position="140,100" data-delay="300">سون لرن - مرجع تخصصی آموزش برنامه نویسی و طراحی وب</div>
+                <div class="slidetext" data-in="right" data-position="200,100" data-delay="500">خاص بودن را با سون لرن تجربه کنید</div>
+                <div class="slidetext" data-in="right" data-position="260,100" data-delay="700">www.7Learn.com</div>
+            </div>
+            <div class="slide">
+                <img data-position="150,450" data-in="bottom" data-delay="200" src="assets/images/responsive.png" width="500px"/>
+                <img data-position="80,180" data-in="top" data-delay="100" src="assets/images/Webdesign.png" width="200px"/>
+                <div class="slidetext" data-in="right" data-position="300,80" data-delay="400">طراحی وب حرفه ای</div>
+                <div class="slidetext" style="transform: rotate(20deg)" data-in="right" data-position="390,80" data-delay="600">طراحی واکنشگرا</div>
+                <div class="slidetext" style="transform: rotate(-35deg)" data-in="bottom" data-position="370,280" data-delay="800">کدنویسی استاندارد</div>
+            </div>
+            <div class="slide">
+                <div class="slidetext" data-in="top" data-position="200,100" data-delay="100">دوره های آموزشی طراحی وب</div>
+                <div class="slidetext" data-in="right" data-position="270,100" data-delay="300">مدرسین با تجربه و متخصص</div>
+                <div class="slidetext" data-in="bottom" data-position="340,100" data-delay="500">پایه تا پیشرفته</div>
+                <img data-position="120,400" data-in="bottom" data-out="bottom" data-delay="500" src="assets/images/course.png" width="500px"/>
+            </div>
+        </div>
+    </section>
+    <script>
+          $('#slider').fractionSlider({
+              timeout : 5000 ,
+              speedIn : 1000,
+              pager:true,
+          });
+    </script>
+
+<!-- Row 1 : About 7Learn -->
+    <section class="rowContainer white" id="row1">
+        <div class="row fwc text-center">
+            <div class="title1">
+                <h2 class="wow bounceIn">درباره مدرسه </h2>
+                <p class="lead wow fadeInUp">کیفیت بالای آموزشی را  فقط از ما بخواهید</p>
+            </div>
+            <div class="content1">
+                
+            </div>
+            <script id="aboutUs__template" type="text/html">
+                <div class="box1 wow fadeInUp" data-wow-offset="200" data-wow-delay="0ms">
+                    <img class="rotate" src="\{{url}}" alt="Generic placeholder image">
+                    <h3>\{{title}}</h3>
+                    <p class="lead">\{{description}}</p>
+                </div>
+            </script>
+            <div class="clear"></div>
+
+
+        </div>
+    </section>
+
+    <!-- Row 2 : 7Learn Products -->
+    <section class="rowContainer silver" id="row2">
+        <div class="row fwc news"></div>
+        <!--
+        <script id="news__template" type="text/html">
+            <img class="left w50p wow bounceIn" src="\{{url}}" width="600" data-wow-offset="10">
+            <div class="content2 right w50p  wow bounceInRight"  data-wow-offset="10">
+                <h3>\{{title}}</h3>
+                <p>\{{description}}</p>
+            </div>
+            <div class="clear m30"></div>
+        </script>
+        -->
+        <script id="news__template" type="text/html">
+            <article id="\{{id1}}" class="closeNews">
+                <div class="content2  wow bounceInRight"  data-wow-offset="10">
+                    <h3 class="title">\{{title}}</h3>
+                    <p class="abstract">\{{abstract}}</p>
+                    <img class="img__news" src="\{{url}}">
+                    <div class="full__description"></div>
+                    <p class="newsDate"> \{{date}} </p>
+                    <img id="\{{id}}" class="arrow__icon" src="./img/down.png">
+                </div>
+            </article>
+            <div class="clear m30"></div>
+        </script>
+    </section>
+
+    <!-- Row 3 : 7Learn Team -->
+    <section class="rowContainer white" id="row3">
+        <div class="row fwc text-center">
+            <div class="title1">
+                <h2 class="wow bounceIn">کادر مدرسه</h2>
+                <p class="lead wow fadeInUp">تیم مجرب و متخصص دبستان سینا در خدمت شماست</p>
+            </div>
+            <div class="content1 team">
+                
+            </div>
+            <script id="team__template" type="text/html">
+                <div class="box1 wow bounceIn" data-wow-offset="200" data-wow-delay="100ms">
+                    <img class="rotate" src="\{{url}}" alt="Generic placeholder image">
+                    <h3>\{{name}}</h3>
+                    <p class="lead">\{{resume}}</p>
+                </div>
+            </script>
+            <div class="clear"></div>
+        </div>
+    </section>
+
+    <!-- Row 3 : 7Learn Team -->
+    <section class="rowContainer silver" id="row4">
+        <div class="row fwc">
+            <div class="left w50p wow fadeInDown" wow-data-offset="400" wow-data-delay="200ms">
+                <h3>تماس با ما</h3>
+                <form action="#" method="post">
+                    <input type="text" name="uname" placeholder="نام شما">
+                    <input type="text" name="email" placeholder="ایمیل شما">
+                    <textarea name="msg" cols="30" rows="5" placeholder="پیام شما ..."></textarea>
+                    <input type="submit" class="btn" value="ارسال پیام">
+                    <input type="reset" class="btn btn-orange" value="پاک کردن فرم">
+                </form>
+            </div>
+            <div class="right w50p wow fadeInRight" wow-data-offset="400" wow-data-delay="500ms">
+                <h3>اطلاعات تماس</h3>
+                
+                <div class="info" id="map">
+                    
+                    <span class="bold">شماره تماس : </span><span>091xxxxxxxxx</span><br>
+                    <span class="bold">آدرس : </span><span>شیراز، حافظیه، آرامگاه حافظ</span><br>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="social">
+                <p class="wow fadeIn" wow-data-offset="290">در شبکه های اجتماعی با ما همراه باشید</p>
+                <ul class=" wow fadeIn" wow-data-offset="300">
+                    <li><a href="#"><img src="assets/images/facebook.png" alt="facebook"></a></li>
+                    <li><a href="#"><img src="assets/images/twitter.png" alt="twitter"></a></li>
+                    <li><a href="#"><img src="assets/images/google-plus.png" alt="google plus"></a></li>
+                    <li><a href="#"><img src="assets/images/youtube.png" alt="youtube"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </section>
+    <footer id="footer">
+        <p class="wow fadeInUp">تمامی حقوق نرم افزاری این وبسایت متعلق به شرکت برنامه نویسان جنوب می باشد .</p>
+    </footer>
+</div>
+
+<script src="assets/scripts.js"></script>
+<script src="./js/plugins/mustache.min.js"></script>
+<script src="../assets/axios.min.js"></script>
+<script src="./js/plugins/jdate.min.js"></script>
+<script src="./assets/jquery.min.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>

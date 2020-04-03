@@ -1,0 +1,229 @@
+@font-face {
+    font-family: BYekan;
+    src: url(../assets/fonts/BYekan.eot) format('eot'),
+    url(../assets/fonts/BYekan.woff) format('woff'),
+    url(../assets/fonts/BYekan.ttf) format('truetype')
+}
+body{
+    font-family: BYekan;
+    font-size: 16px;
+    direction: rtl;
+    text-align: right;
+}
+.content {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background: white;
+    right: 210px;
+    bottom: 0;
+    padding: 20px;
+    overflow: auto;
+    }
+.profilePic {
+    display: block !important;
+    width: 120px !important;
+    height: 120px !important;
+    margin: 0 auto;
+    margin-top: 25px;
+    box-sizing: border-box;
+    
+    
+}
+.settings {
+    height: 170px !important;
+}
+.freezForm {
+    border: 1px solid #aaa;
+    padding: 10px;
+    margin-top: 20px;
+    color: #444;
+}
+.freezForm input {
+    margin-left: 50px;
+    font-size: 17px;
+    font-family: BYekan;
+    padding: 3px 5px;
+    border-radius: 5px;
+    height: 20px;
+    width: 250px;
+    border: none;
+    margin-bottom: 10px;
+    color: #aaa;
+}
+.freezForm p {
+    font-size: 18px;
+    font-weight: bold;
+    color: teal;
+}
+.freezForm label {
+    display: inline-block;
+    width: 200px;
+    font-family: BYekan;
+
+}
+.freezForm select {
+    padding: 3px;
+    border-radius: 5px;
+    font-family: BYekan;
+}
+.freezForm button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-size: 15px;
+    font-family: BYekan;
+    font-weight: bold;
+    color: #0277bd;
+    background-color: #81d4fa;
+    border: none;
+}
+.freezForm button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.teacherChangePassword a {
+    padding: 10px 15px;
+    display: inline-block;
+    margin: 15px;
+    background-color: #0277bd;
+    border-radius: 5px;
+}
+.teacherChangePassword a:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+/*  open form 888888888888888888888888888888888888*/
+.openForm {
+    border: 1px solid #aaa;
+    padding: 10px;
+    margin-top: 20px;
+    color: black;
+}
+.openForm input {
+    margin-left: 50px;
+    font-size: 17px;
+    font-family: BYekan;
+    padding: 3px 5px;
+    border-radius: 5px;
+    height: 20px;
+    width: 250px;
+    margin-bottom: 10px;
+    color:black;
+}
+.openForm p {
+    font-size: 18px;
+    font-weight: bold;
+    color: teal;
+}
+.openForm label {
+    display: inline-block;
+    width: 130px;
+    font-family: BYekan;
+    font-weight: bold;
+    vertical-align: top !important;
+    margin-bottom: 20px;
+
+}
+.openForm textarea {
+    border-radius: 5px;
+    font-family: BYekan;
+    font-size: 14px;
+}
+.openForm select {
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: BYekan;
+    font-size: 14;
+}
+.openForm button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-size: 15px;
+    font-family: BYekan;
+    font-weight: bold;
+    color: #0277bd;
+    background-color: #81d4fa;
+    border: none;
+}
+.openForm button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.openForm .label200 {
+    width: 200px !important;
+}
+.openForm .label400 {
+    width: 400px !important;
+}
+.openForm span {
+    color: red;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+table {
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+table th {
+    color: #666;
+    font-weight: bold;
+    padding: 10px 30px;
+    width: auto;
+}
+table td {
+    color: #666;
+    width: auto;
+    
+    padding: 5px 30px;
+}
+table tr:nth-child(2n) {
+    background-color: #eee;
+
+}
+.questionSelect {
+    max-height: 400px;
+}
+.content .questionDesign, .content .questionSharing, .content .questionEdit, .questionEdit .editQuestion {
+    display: none;
+}
+/*************************** tooltip style ******************/
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 600px;
+    height: auto;
+    background-color: #164c6b;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    right: 0;
+    bottom: 0;
+    vertical-align: top;
+    padding: 10px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  /************************************************************/
+  .left100 {
+      display: inline-block;
+      margin-left: 100px;
+  }

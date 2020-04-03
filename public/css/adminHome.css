@@ -1,0 +1,820 @@
+@font-face {
+    font-family: BYekan;
+    src: url(../assets/fonts/BYekan.eot) format('eot'),
+    url(../assets/fonts/BYekan.woff) format('woff'),
+    url(../assets/fonts/BYekan.ttf) format('truetype')
+}
+body{
+    font-family: BYekan;
+    font-size: 16px;
+    direction: rtl;
+    text-align: right;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+.tabs {
+    position: relative;
+    width: 800px;
+    min-height: 500px;
+    clear: both;
+    margin: 25px auto;
+}
+
+.tab {
+float: right;
+}
+
+label {
+width: 80px;
+display: inline-block;
+padding: 10px;
+margin-right: -1px;
+position: relative;
+right: 1px;
+font-weight: bold;
+font-size: 14px;
+color: slategrey;
+}
+
+.content {
+position: absolute;
+top: 10px;
+left: 0;
+background: white;
+right: 210px;
+bottom: 0;
+padding: 20px;
+overflow: auto;
+}
+
+.information label , .information input ,.documents label , .documents input{
+    padding: 2px;
+    margin-top: 15px;
+    
+}
+.information input[type="file"] {
+    color: grey;
+}
+
+.submit-btn {
+/* border: 1px solid #aa00ff; */
+/* border-bottom-width: 3px !important;
+border-right-width: 2px !important; */
+border-radius: 4px;
+display: inline-block;
+cursor: pointer;
+/* background-color: green; */
+/* color: #ffffff; */
+font-family: BYekan;
+font-size: 16px;
+font-weight: bold;
+padding: 6px 12px;
+margin: 5px;
+}
+.removeAboutUs {
+    float: left;
+    margin-left: 50px;
+}
+
+.fa-cancel ,.fa-trash {
+    margin-right: 4px;
+    vertical-align: middle;
+}
+.documents p {
+    color: green;
+}
+.news__container div, .aboutUs__container div, .teamMembers__container div, .educationYear__container div {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.news__container .news__title, .aboutUs__container .news__title, .teamMembers__container .news__title, .educationYear__container .news__title {
+    font-weight: bold;  
+    font-size: 17px; 
+    
+    width: 180px;
+    color: #444;
+}
+.educationYear .educationYear__update__btn, .educationYear .educationYear__reset__btn {
+    display: none;
+}
+.news__container .news__description, .aboutUs__container .news__description, .teamMembers__container .news__description, .educationYear__container .news__description {
+    width: 400px;
+    color: #444;
+}
+table {
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+table th {
+    color: #666;
+    font-weight: bold;
+    padding: 10px 30px;
+    width: auto;
+}
+table td {
+    color: #666;
+    width: auto;
+    
+    padding: 5px 30px;
+}
+table tr:nth-child(2n) {
+    background-color: #eee;
+
+}
+.removeTeamMembers {
+    float: left;
+    margin-left: 50px;
+}
+.teamMember__update__btn, .teamMember__reset__btn {
+    display: none;
+}
+.btn__check {
+    /* background-color: #9c27b0 !important; */
+    padding: 3px 6px;
+    margin: 5px;
+}
+.news__container .check {
+    margin-right: 15px;
+}
+.news__container {
+    color: #444;
+    margin-bottom: 200px;
+}
+.tool__box {
+    border-top: 1px solid #444;
+}
+.tool__box  {
+    padding: 5px;
+    
+    border-radius: 5px;
+    border: 1px solid;
+}
+.search__box {
+    border: 2px solid gray;
+    border-radius: 5px;
+    width: 280px;
+    display: inline-block;
+    margin-left: 50px;
+}
+.search__box input {
+    border: none;
+    font-family: BYekan;
+    font-size: 14px;
+    width: 235px;
+    margin: 2px;
+    padding: 5px;
+    
+
+}
+.search__box input:focus {
+    outline: none;
+}
+hr {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    border: 1px solid #aaa;
+}
+.news__update__btn, .news__reset__btn {
+    display: none;
+}
+.aboutUs__update__btn, .aboutUs__reset__btn {
+    display: none;
+}
+/* ----------------- check box style --------------------------- */
+input[type=checkbox] {
+         position: relative;
+	       cursor: pointer;
+    }
+    input[type=checkbox]:before {
+         content: "";
+         display: block;
+         position: absolute;
+         width: 16px;
+         height: 16px;
+         top: 0;
+         left: 0;
+         border: 2px solid #555555;
+         border-radius: 3px;
+         background-color: white;
+}
+    input[type=checkbox]:checked:after {
+         content: "";
+         display: block;
+         width: 5px;
+         height: 10px;
+         border: solid black;
+         border-width: 0 2px 2px 0;
+         -webkit-transform: rotate(45deg);
+         -ms-transform: rotate(45deg);
+         transform: rotate(45deg);
+         position: absolute;
+         top: 2px;
+         left: 6px;
+}
+/*888888888888888888888888888888888888888888888888*/  
+#picId, #aboutucPicId, #teamPicId {
+    color: red;
+}
+
+.label {
+    color: slategrey;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+.form1 input[type="text"], .form1 input[type="file"], .form1 input[type="number"] {
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #9b9a9a;
+    font-family: BYekan;
+    color: black;
+}
+.content .news, .content .about__us, .content .team__members, .content .education__year, .content .students {
+    display: none;
+}
+.educationYear .cost3 {
+    display: inline-block;
+    color: rgb(94, 97, 89);
+    margin-right: 0;
+    width: auto;
+}
+.educationYear .cost4 {
+    display: inline-block;
+    color: rgb(94, 97, 89);
+    margin-right: 5px;
+    width: auto;
+
+}
+
+/* -------------------Dashboard section START ---------------------*/
+ .main__section {
+   
+    width: 1015px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+
+.main__section .box {
+    background-color:#26C6DA;
+    border-radius: 20px;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 10px;
+    display: inline-block;
+    width: 200px;
+    margin-left: 30px;
+    margin-right: 15px;
+    vertical-align: middle;
+    
+    
+}
+.main__section .box .title {
+    font-weight: bold;
+    margin-left: 20px;
+    
+}
+ .teacher, .course, .teacher .teacherCourse__section, .teacher .teacherProfile__section, .teacher .teacherPayments__section,  .teacherCourse__section .teacherCourseForm{
+    display: none;
+}
+.main__section .box .counter {
+    margin-right: 10px;
+    color: white;
+    border-radius: 50%;
+    background-color: #ef5350;
+    padding: 3px;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    font-weight: bold;
+    box-sizing: border-box;
+    /* display: inline-block; */
+    text-align: center;
+    float: left;
+    
+
+}
+.main__section .box .dashbord__label {
+    width: 150px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.main__section .box:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+.content .dashbord .toolbox__section {
+    margin-top: 50px;
+    border: 1px solid #bbb;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+.content .dashbord .toolbox__section .dashbord__btn {
+    padding: 8px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: #00acc1;
+    font-family: BYekan;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    border: none;
+    margin-left: 30px;
+}
+.content .dashbord .toolbox__section .dashbord__btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+.content .dashbord .toolbox__section .student__abstract__list {
+    padding: 10px;
+    width: 100%;
+    max-height: 250px;
+    margin-top: 20px;
+
+}
+.content .dashbord .toolbox__section .student__abstract__list .student__fullName,
+.content .dashbord .toolbox__section .student__abstract__list .student__mobileNumber,
+.content .dashbord .toolbox__section .student__abstract__list .student__enroll__status
+{
+    font-size: 16px;
+    margin-left: 5px;
+    color: #555;
+    width: 250px;
+
+}
+.content .dashbord .toolbox__section .student__abstract__list .rows {
+    padding: 0px 5px;
+}
+.content .dashbord .toolbox__section .student__abstract__list a {
+    margin-right: 15px;
+    margin-left: 0;
+}
+.content .dashbord .toolbox__section .student__abstract__list div {
+    display: inline-block;
+}
+
+.content .dashbord .acceptEnroll__section .acceptEnroll__abstract__list {
+    padding: 10px;
+    width: 100%;
+    max-height: 250px;
+    margin-top: 20px;
+
+}
+.content .dashbord .acceptEnroll__section .acceptEnroll__abstract__list .rows {
+    padding: 0px 5px;
+}
+.content .dashbord .acceptEnroll__section .acceptEnroll__abstract__list a {
+    margin-right: 15px;
+    margin-left: 0;
+}
+.content .dashbord .acceptEnroll__section .acceptEnroll__abstract__list div {
+    display: inline-block;
+}
+
+.content .dashbord .acceptEnroll__section .acceptEnroll__abstract__list .student__fullName,
+.content .dashbord .acceptEnroll__section .acceptEnroll__abstract__list .student__mobileNumber
+{
+    font-size: 16px;
+    margin-left: 5px;
+    color: #555;
+    width: 250px;
+
+}
+.active {
+    background-color: #FFAB40 !important;
+    color: #5D4037;
+}
+.accept {
+    color: green !important;
+    font-weight: bold;
+}
+.reject {
+    color: red !important;
+    font-weight: bold;
+}
+.waiting {
+    color: orange !important;
+    font-weight: bold;
+}
+.even{
+ background-color: #eee;
+
+}
+.odd {
+    background-color: white;
+}
+.content .dashbord .preEnroll__section .detail__section {
+    border: 1px solid #bbb;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 5px;
+    display: none;
+}
+.content .dashbord .acceptEnroll__section .detail__section {
+    border: 1px solid #bbb;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 5px;
+    display: none;
+}
+
+.content .dashbord .detail__section form label {
+    width: 120px;
+    color:#37474F;
+}
+.content .dashbord .detail__section form textarea {
+    vertical-align: top;
+    border: none;
+}
+.content .dashbord .detail__section form input[type=text] {
+    font-family: BYekan;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    width: 166px;
+    color: #78909C;
+    
+}
+.content .dashbord .detail__section form .decision {
+    margin: 10px auto;
+    width: 700px;
+}
+.content .dashbord .detail__section form .decision span {
+    color:#880E4F;
+    margin-left: 30;
+}
+.content .dashbord .detail__section form .decision input {
+    margin-right: 20px;
+}
+.content .dashbord .detail__section form .decision label {
+    margin: 0;
+}
+.content .dashbord .detail__section form button {
+    padding: 8px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: #176972;
+    font-family: BYekan;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    border: none;
+    margin-right: 200px;
+}
+.content .dashbord .detail__section form button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+#img1, #img2, #img3 {
+    margin-right: 50px;
+    margin-top: 50px;
+    
+}
+
+.content .dashbord .acceptEnroll__section .detail__section .accept__Enroll {
+    margin: 0 auto;
+    background-color: #26C6DA;
+    display: block;
+    margin-bottom: 30px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 18px;
+}
+.approve__payments {
+    display: none;
+}
+.approve__payments img {
+    width: 200px;
+    height: 300px;
+}
+.approve__payments img:hover {
+    cursor: pointer;
+}
+.waiting__approve__list table {
+    color: #555;
+    border: 1px solid #ccc;
+    margin-right: 100px;
+    margin-top: 50px;
+    
+}
+.waiting__approve__list table th {
+    width: 150px;
+    text-align: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    
+}
+.waiting__approve__list table td {
+    width: 150px;
+    text-align: center;
+    
+}
+.waiting__approve__list table tr:nth-child(2n) {
+    background-color: #eee;
+}
+.acceptPayment__section form {
+    margin-right: 70px;
+    margin-top: 50px;
+    border: 1px solid thistle;
+    padding: 30px;
+    width: 750px;
+}
+.acceptPayment__section form label {
+    width: 120px;
+    vertical-align: top;
+    display: inline-block;
+    
+}
+.acceptPayment__section form input[type="text"] {
+    font-family: BYekan;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    width: 166px;
+    color: #78909C;
+}
+.acceptPayment__section form img {
+    margin-right: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.acceptPayment__section form button {
+
+    padding: 8px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: #176972;
+    font-family: BYekan;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    border: none;
+    margin-right: 140px;
+}
+.acceptPayment__section form button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.chart__1, .chart__2 {
+    display: inline-block;
+    /* border: 1px solid black; */
+    width: 500px;
+    height: 400px;
+    margin-top: 10px;
+    
+}
+
+/* -------------------Dashboard section END ---------------------*/
+.paymentPart .payment__section {
+    margin-top: 30px;
+    display: inline-block;
+    border: 1px solid #eee;
+
+
+}
+.paymentPart .payment__chart {
+    border: 1px solid #eee;
+   
+    vertical-align: top;
+    margin-top: 30px;
+    display: inline-block;
+
+}
+.payment__chart .summary {
+    width: auto !important;
+    margin-right: 40px;
+}
+.payment__chart .summary label {
+    width: auto !important;
+}
+.payment__chart .summary #paid {
+    color: green;
+
+}
+.payment__chart .summary #remain {
+    color: orange;
+    
+}
+.paymentPart .payment__section {
+   margin-left: 20px;
+}
+.profilePart {
+    margin-top: 30px;
+}
+.profilePart .changePassword {
+    border: 1px solid #00BFA5;
+    padding: 10px 20px;
+    background-color: #00BFA5;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 20px;
+    display: block;
+    width: 200px;
+    box-sizing: border-box;
+}
+.profilePart .changePassword:hover {
+    opacity: 0.8;
+}
+select {
+    padding: 7px 12px;
+    border-radius: 5px;
+    font-family: BYekan;
+    font-size: 15px;
+}
+.search__result__container {
+    max-height: 500px;
+}
+.information {
+    
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 15px 30px;
+}
+.payment__form {
+    border-radius: 5px;
+    padding: 10px;
+}
+.payment__form input[type="file"] {
+    width: 120px;
+}
+.information span {
+    display: inline-block;
+    width: 150px;
+    color: #0277BD;
+    margin: 30px 400px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.information label {
+    margin-right: 30px;
+    width: 150px;
+    font-size: 15px;
+    
+}
+.payment__form label {
+    margin-right: 10px;
+    width: 150px;
+    font-size: 15px;
+}
+.information input, .payment__form input {
+    margin-left: 10px;
+    font-size: 15px;
+    font-family: BYekan;
+    padding: 3px 5px;
+    border-radius: 5px;
+    
+}
+.information input[type="text"] {
+    height: 20px;
+    width: 130px;
+    border: none;
+}
+.information button, .payment__form button {
+    margin-right: 30px;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #4FC3F7;
+    color: #0277BD;
+    border: none;
+    font-family: BYekan;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.payment__form button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+.payment__form select {
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-family: BYekan;
+    font-size: 12px;
+}
+
+.payment__form .cost2 {
+    width: auto !important;
+    display: inline-block !important;
+    margin-right: 10px !important;
+}
+.payment__form .cost1 {
+    width: auto !important;
+    display: inline-block !important;
+    margin-right: 160px !important;
+}
+.information  .docs #img1, .information .docs #img2, .information .docs #img3, .acceptEnroll .docs #img1, .acceptEnroll .docs #img2, .acceptEnroll .docs #img3 {
+    width: 200px !important;
+    height: 160px !important;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-right: 30px;
+}  
+.information  .docs #img1:hover,  .information .docs #img2:hover, .information .docs #img3:hover, .acceptEnroll .docs #img1:hover, .acceptEnroll .docs #img2:hover, .acceptEnroll .docs #img3:hover {
+   cursor: pointer;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.educationYear__selector {
+    width: 120px;
+    height: 70px;
+    margin: 40px auto;
+}
+.pagination {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #eee;
+    padding: 5px 10px;
+    width: 160px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-right: 260px;
+    height: 30px;
+   
+}
+.pagination div {
+    vertical-align: middle;
+}
+.pagination a {
+    padding: 3px 5px;
+    margin: 0 !important;
+    float: left;
+    
+}
+
+.pagination .pages {
+    min-width: 70px !important; 
+    margin-left: 5px;
+    float: left;
+ }
+.currentPage {
+    background-color: #888;
+    
+    border-radius: 3px;
+}
+
+
+.clear {
+    clear: both;
+}
+.space {
+    display: inline-block;
+    margin-left: 40px;
+}
+.space label {
+    width: auto;
+    margin-left: 10px;
+    display: inline-block; 
+}
+.newTeacher__section .teacherForm {
+    margin-top: 50px;
+}
+.search__tools {
+    margin-top: 50px;  
+}
+
+table {
+    border: 1px solid #ddd;
+}
+.teacherProfileForm {
+    display: none;
+}
+.teacherProfileForm input, .teacherCourseForm input{
+    border: none !important;
+}
+.teacherProfileForm .title, .teacherCourseForm .title{
+    width: 200px !important;
+}
+.teacherProfileForm img {
+    width: 60px;
+    height: 80px;
+}
+.teacherProfileForm a {
+    background-color: violet;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+.teacherProfileForm a:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}

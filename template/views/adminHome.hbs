@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html class="menu">
+    <head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="google" value="notranslate"/>
+    <title>داشبورد</title>
+    <link rel="stylesheet" href="./css/adminHome.css">
+    <link rel="stylesheet" href="./css/plugins/spinner.css">
+    <link rel="stylesheet" type="text/css" href="./css/adminPage.css">
+    <link rel="stylesheet" type="text/css" href="./css/plugins/all.css">
+    {{!-- **********felora TEXTBOX EDITOR**************  --}}
+    <link href="./css/plugins/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="./js/plugins/froala_editor.pkgd.min.js"></script>
+    <link href="./css/plugins/froala_style.min.css" rel="stylesheet" type="text/css" />
+    {{!-- **************END FLORA EDITOR****************** --}}
+    <link rel="stylesheet" href="./css/plugins/persian-datepicker.css"/>
+    <script src="./js/plugins/jquery.js"></script>
+    <script src="./js/plugins/persian-date.js"></script>
+    <script src="./js/plugins/persian-datepicker.js"></script>
+    <script src="./sweetalert2/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="./sweetalert2/dist/sweetalert2.min.css"> 
+   
+    </head>
+    <body>
+        <div id="spinner-front">
+        <img src="../img/ajax-loader.gif"/><br>
+        لطفا صبر کنید ...
+        </div>
+        <nav class="main-menu">
+
+        <div>
+            <a class="logo" href="#"></a> 
+        </div> 
+        <div class="settings"></div>
+        <div class="scrollbar" id="style-1">    
+        <ul>
+            <li class="dashbord__section active-menu">                                   
+                <a href="#">
+                <i class="fa fa-home fa-lg"></i>
+                <span class="nav-text">داشبورد</span>
+                </a>
+            </li> 
+            <li class="password__section">                                   
+                <a href="#">
+                <i class="fas fa-key fa fa-lg"></i>
+                <span class="nav-text">تغییر رمز عبور</span>
+                </a>
+            </li>   
+            <li class="educationYear__section">                                   
+                <a href="#">
+                <i class="fas fa-school fa fa-lg"></i>
+                <span class="nav-text">سال تحصیلی</span>
+                </a>
+            </li>  
+            <li class="students__section">                                   
+                <a href="#">
+                <i class="fas fa-user-graduate fa fa-lg"></i>
+                <span class="nav-text">پروفایل دانش آموز</span>
+                </a>
+            </li>
+            <li class="teacher__section">                                   
+                <a href="#">
+                <i class="fas fa-chalkboard-teacher fa fa-lg"></i>
+                <span class="nav-text">معلم</span>
+                </a>
+            </li>
+            <li class="course__section">                                   
+                <a href="#">
+                <i class="fas fa-book fa fa-lg"></i>
+                <span class="nav-text">درس</span>
+                </a>
+            </li>
+            <li class="news__section">                                 
+                <a href="#">
+                <i class="fa fa-newspaper fa-lg"></i>
+                <span class="nav-text">اخبار</span>
+                </a>
+            </li>   
+        
+            <li class="aboutUs__section">                                 
+                <a href="#">
+                <i class="fa fa-lg fas fa-id-card"></i>
+                <span class="nav-text">درباره ما</span>
+                </a>
+            </li>
+            <li class="team_member__section">                           
+                <a href="#">
+                <i class="fa fa-lg fas fa-users"></i>
+                <span class="nav-text">کادر مدرسه</span>
+                </a>
+            </li> 
+        </ul>
+        
+        
+        <ul class="logout">
+            <li>
+                <a href="#">
+                    <i class="fa fa-lg fas fa-sign-out-alt"></i>
+                    <span class="nav-text">
+                        خروج 
+                    </span> 
+                </a>
+            </li>  
+        </ul>
+        </div>
+        </nav>
+        <div class="content">
+            <div class="news">
+                <div class="add__news__container">
+                    <div class="label">افزودن خبر</div>
+                    <form class="form1 addNews documents">
+                        <label>عنوان خبر</label>
+                        <input type="text" name="title">
+                    
+                        <label class="marginRight">خلاصه خبر</label>
+                        <input type="text" name="shortDescription">
+                        <br>
+                        <label>تاریخ انقضا</label>
+                        <input type="text" name="expireDate" class="persianDate">
+                        
+                        <label for="myfile" class="marginRight">انتخاب عکس </label>
+                        <input type="file" value="image" name="image" accept=".gif, .jpg, .jfif, .png, .jpeg">
+                        <span id="picId"></span>
+                        <label class="marginRight">انتشار</label>
+                        <input type="checkbox" name="publish">
+                        
+                        <br>
+                        <br>
+                        <div id="felora__editor">
+                            <div id="aa" class="fr-view">
+                                
+                            </div>
+                        </div>  
+                        <p id="msg"></p>
+                        <button class="news__add__btn submit-btn">ارسال</button>
+                        <button class="news__update__btn submit-btn" ><a href="#" class="find"> بروز رسانی <i class="fas fa-pen-alt"></i></a></button>
+                        <button class="news__reset__btn submit-btn" ><a href="#" class="close"> انصراف <i class="fas fa-times fa-cancel"></i></a></button>
+
+
+                    </form>     
+                </div> 
+                <hr>
+                <div class="tool__box">
+                    <div class="search__box">
+                        <input type="text" class="input__search" placeholder="جستجوی خبر">
+                        <a href="#" class="find"><i class="fas fa-search fa-lg"></i></a>
+                    </div>
+                    <button class="btn remove submit-btn"><a href="#">حذف اخبار انتخابی<i class="fas fa-trash-alt fa-lg fa-trash"></i></a></button>
+                </div>
+                <div class="news__container">
+                    <div>
+                        <table>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="dashbord">
+                <div class="main__section">
+
+                    <div class="box chart__box clear active">
+                        <div class="dashbord__label">
+                            <span class="title">نمودارها</span>
+                        </div>
+                    </div>
+                   
+                    <div class="box preEnroll__box clear">
+                        <div class="dashbord__label">
+                            <span class="title">پیش ثبت نام</span>
+                            <span class="counter"></span>
+                        </div>
+                    </div>
+                   
+                    <div class="box acceptEnroll__box clear">
+                        <div class="dashbord__label">
+                            <span class="title">تایید ثبت نام</span>
+                            <span class="counter"></span>
+                        </div>
+                    </div>
+
+                    <div class="box acceptPayments__box clear">
+                        <div class="dashbord__label">
+                            <span class="title">تایید پرداختی </span>
+                            <span class="counter"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart__section">
+                    <div class="educationYear__selector">
+                        <select>
+
+                        </select>
+                    </div>
+                    <div class="chart__1">
+                         <canvas id="chart1"></canvas>
+                    </div>
+                    <div class="chart__2">
+                         <canvas id="chart2"></canvas>
+                    </div>
+                </div>
+                <div class="preEnroll__section">
+                    <div class="toolbox__section">
+                        <div class="search__box">
+                            <input type="text" class="input__search" placeholder="جستجو دانش آموز">
+                            <a href="#" class="find"><i class="fas fa-search fa-lg"></i></a>
+                        </div>
+                        <button class="dashbord__btn" onclick="displayList('2')">بررسی نشده ها</button>
+                        <button class="dashbord__btn" onclick="displayList('1')">تایید شده ها</button>
+                        <button class="dashbord__btn" onclick="displayList('0')">رد شده ها</button>
+                        <div class="student__abstract__list">
+                            <script id="student__enroll__list__template" type="text/html">
+                                <div class="rows \{{background__color}}">
+                                    <input class="check" type="checkbox" value="\{{id1}}">
+                                    <div class="student__fullName">\{{fullName}}</div>
+                                    <div class="student__mobileNumber">\{{mobileNumber}}</div>
+                                    <div class="student__enroll__status \{{className}}">\{{status}}</div>
+                                    <a href="#" class="edit" onclick="updateEnrollStatus('\{{id}}')" ><i class="fas fa-edit fa-lg"></i></a>
+                                    <a href="#" class="find" onclick="deleteStudent('\{{delId}}')"><i class="fas fa-trash-alt fa-lg"></i></a> 
+                                </div>
+                                <br>
+                            </script>
+                        </div>
+
+                    </div>
+                    <div class="detail__section">
+                        <form class="preEnroll">
+                            <label>نام:</label>
+                            <input name="name" type="text">
+                            
+                            <label>نام خانوادگی:</label>
+                            <input name="family" type="text">
+                            
+                            <label>محل تحصیل سال قبل:</label>
+                            <input name="lastSchool" type="text">
+                            <br>
+                            <label>معدل سال قبل:</label>
+                            <input  name="lastYearMark" type="text">
+
+                            <label>پایه تحصیلی:</label>
+                            <input name="level" type="text">
+
+                            <label>موبایل:</label>
+                            <input name="mobile" type="text">
+                            
+                            <br>
+                            <label>چندمین فرزند خانواده:</label>
+                            <input name="childNum" type="text">
+                            
+                            <label>شغل پدر:</label>
+                            <input name="fatherJob" type="text" >
+                            
+                            <label>مدرک تحصیلی پدر:</label>
+                            <input name="fatherLicense" type="text">
+                                
+                            <br>
+                            <label>شغل مادر:</label>
+                            <input name="motherJob" type="text" >
+                            
+                            <label>مدرک تحصیلی مادر:</label>
+                            <input name="motherLicense" type="text">
+                            
+                            <label>آیا ولی جانباز است؟</label>
+                            <input name="isSacrifice" type="text">
+                            
+                            <br>
+                            <div class="decision">
+                                <span>وضعیت :</span>
+                                <input type="radio" id="waiting" name="status" value="2">
+                                <label for="waiting">بررسی </label>
+                                <input type="radio" id="reject" name="status" value="0">
+                                <label for="reject">رد </label>
+                                <input type="radio" id="accept" name="status" value="1">
+                                <label for="accept">تایید </label>
+                            </div>
+                            <br>
+                            <button class="changeStatusBtn">تغییر وضعیت</button>
+                            <button class="reset__btn">انصراف</button>
+                            <p></p>
+                        </form>                    
+                    </div>
+                </div>
+
+                <div class="acceptEnroll__section">
+                    <div class="acceptEnroll__abstract__list">
+                        <script id="enroll__list__template" type="text/html">
+                            <div class="rows \{{background__color}}">
+                                <div class="student__fullName">\{{fullName}}</div>
+                                <div class="student__mobileNumber">\{{mobileNumber}}</div>
+                                <a href="#" class="accept" onclick="acceptEnroll('\{{id}}')" ><i class="fas fa-edit fa-lg"></i></a>
+                            </div>
+                            <br>
+                        </script>
+                    </div>
+                    <div class="detail__section">
+                        <form class="acceptEnroll">
+                            <label>نام:</label>
+                            <input type="text" name="firstName">
+
+                            <label>نام خانوادگی:</label>
+                            <input type="text" name="lastName">
+                            <br>
+                            <label>نام پدر:</label>
+                            <input type="text" name="parentName">
+                            
+                            <label>کد ملی:</label>
+                            <input type="text" name="NationalID">
+                            <br>
+                            <label>سال تولد:</label>
+                            <input type="text" name="yearOfBirth">
+
+                            <label>شماره تلفن:</label>
+                            <input type="text" name="mobileNumber">
+                            
+                            <br>
+                            <label>کد پستی:</label>
+                            <input type="text" name="zipCode">
+                        
+                            <label>آدرس:</label>
+                            <input type="text" name="address">
+                            
+                            <br>
+                            <br>
+                        
+                            <div class="docs">
+                                <img id="img1">
+                                <img id="img2">
+                                <img id="img3">
+                            </div>
+                            <p id="submit"></p>
+                            <button class="accept__Enroll" type="submit">تایید</button>
+                        </form>                    
+                    </div>
+                  
+                </div>
+                <div class="acceptPayment__section">
+                    <div class="waiting__approve__list">
+                        <table>
+                            
+                            
+                                
+                        </table>
+                    </div>
+                    <form class="approve__payments">
+                         <label>نام:</label>
+                        <input name="name" type="text">
+                        
+                        <label>نام خانوادگی:</label>
+                        <input name="family" type="text">
+                        <br>
+                        <label> کد ملی:</label>
+                        <input name="nationalID" type="text">
+                        <label> تاریخ واریز:</label>
+                        <input name="payDate" type="text">
+                        <br>
+                        <label>مبلغ: </label>
+                        <input name="bill" type="text">
+                        <label>سال تحصیلی:</label>
+                        <input name="educationYear" type="text">
+                        <br>
+                        <label> تصویر فیش پرداختی:</label>
+                        <img name="fish" >
+
+
+                        
+                        <br>
+                        <button class="changeStatusBtn">تایید </button>
+                        <button class="reset__btn">انصراف</button>
+                        <p></p>
+                    </form>
+                </div>
+            </div>
+            <div class="about__us">
+                <div>
+                    <form class="form1 aboutUs documents">
+                        <label>عنوان </label>
+                        <input type="text" name="title">
+                        <br>
+                        <label>توضیح </label>
+                        <input type="text" name="description">
+                        <br>
+                        <label for="myfile">انتخاب عکس </label>
+                        <input type="file" value="image" name="image" accept=".gif, .jpg, .jfif, .png, .jpeg" required>
+                        <span id="aboutucPicId"></span>
+                        <br>
+                        <p></p>
+                        <button class="submit-btn aboutUs-btn" type="submit" >ارسال</button>
+                        <button class="aboutUs__update__btn submit-btn" ><a href="#" class="find"> بروز رسانی <i class="fas fa-pen-alt"></i></a></button>
+                        <button class="aboutUs__reset__btn submit-btn" ><a href="#" class="close"> انصراف <i class="fas fa-times fa-cancel"></i></a></button>
+
+                    </form>
+                    
+                </div>
+                <hr>
+                <button class="btn removeAboutUs submit-btn">حذف آیتم های انتخابی</button>
+                <div class="clear"></div>
+                <div class="aboutUs__container">
+                    <div>
+                        <table>
+                            
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="team__members">
+                <div>
+                    <form class="form1 team documents">
+                        <label>عنوان </label>
+                        <input type="text" name="name">
+                        <br>
+                        <label>توضیح </label>
+                        <input type="text" name="resume">
+                        <br>
+                        <label for="myfile">انتخاب عکس </label>
+                        <input type="file" value="image" name="image" accept=".gif, .jpg, .jfif, .png, .jpeg" required>
+                        <span id="teamPicId"></span>
+                        <br>
+                        <p></p>
+                        <button class="submit-btn" >ارسال</button>
+                        <button class="teamMember__update__btn submit-btn" ><a href="#" class="find"> بروز رسانی <i class="fas fa-pen-alt"></i></a></button>
+                        <button class="teamMember__reset__btn submit-btn" ><a href="#" class="close"> انصراف <i class="fas fa-times fa-cancel"></i></a></button>
+
+                    </form>
+                    
+                </div>
+                <hr>
+                <button class="btn removeTeamMembers submit-btn">حذف آیتم های انتخابی</button>
+                <div class="clear"></div>
+                <div class="teamMembers__container">
+                    <div>
+                        <table>
+
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="education__year">
+                <div>
+                    <form class="form1 educationYear documents">
+                        <label>سال تحصیلی </label>
+                        <input type="text" name="year" placeholder="1399-1400">
+                        <br>
+                        <label>میزان شهریه </label>
+                        <input type="number" name="tuition">
+                        <label class="cost4"></label>
+                        <label class="cost3">ریال</label>
+                        <br>
+                        <label class="marginRight">فعال کردن سال تحصیلی</label>
+                        <input type="checkbox" name="isActive">
+                        <br>
+                        <p></p>
+                        <button class="submit-btn educationYear__btn" type="submit" ><a href="#" class="find">  ایجاد <i class="fas fa-check"></i></a></button>
+                        <button class="educationYear__update__btn submit-btn" ><a href="#" class="find"> بروز رسانی <i class="fas fa-pen-alt"></i></a></button>
+                        <button class="educationYear__reset__btn submit-btn" ><a href="#" class="close"> انصراف <i class="fas fa-times fa-cancel"></i></a></button>
+
+                    </form>
+                    
+                </div>
+                <hr>
+                <button class="btn removeEducationYear  submit-btn">حذف آیتم های انتخابی</button>
+                <div class="clear"></div>
+                <div class="educationYear__container">
+                    <div>
+                        <table>
+                            
+                            
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="students">
+                <div class="search__tools">
+                    <div class="search__box">
+                        <input type="text" class="input__search" placeholder="جستجوی دانش آموز">
+                        <a href="#" class="find"><i class="fas fa-search fa-lg"></i></a>
+                    </div>
+
+                    <select>
+                        <option value="lastName" selected>نام خانوادگی</option>
+                        <option value="nationalID" >کد ملی</option>
+                        <option value="mobileNumber" >شماره همراه</option>
+                    </select>
+                </div>
+                <div class="search__result__container">
+                        <table>
+
+                        </table>
+                    <div class="pagination">
+                        <div class="first"></div>
+                         
+                        <div class="pages"></div>
+                        
+                        <div class="last"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <hr>
+                <div class="showProfile__container hide">
+                    <div class="profilePart">
+                        <a href="#" class="changePassword" onclick="changePassword(event)">تغییر رمز عبور دانش آموز</a>
+                        <form class="information">
+                            <span>مشخصات دانش آموز</span>
+                            <br>
+                            <label>نام:</label>
+                            <input type="text" name="firstName" readonly>
+
+                            <label>نام خانوادگی:</label>
+                            <input type="text" name="lastName" readonly>
+                            <br>
+                            <label>نام پدر:</label>
+                            <input type="text" name="parentName" readonly>
+                            
+                            <label>کد ملی:</label>
+                            <input type="text" name="NationalID" readonly>
+                            <br>
+                            <label>سال تولد:</label>
+                            <input type="text" name="yearOfBirth" readonly>
+
+                            <label>شماره تلفن:</label>
+                            <input type="text" name="mobileNumber" readonly>
+                            
+                            <br>
+                            <label>کد پستی:</label>
+                            <input type="text" name="zipCode" readonly>
+                        
+                            <label readonly>آدرس:</label >
+                            <input type="text" name="address">
+                            <br>
+                            
+                        
+                            <div class="docs">
+                                <img id="img1">
+                                <img id="img2">
+                                <img id="img3">
+                            </div>
+                            
+                        </form>
+                    </div>
+                    <div class="paymentPart">
+                        <div class="payment__section">                            
+                            <form class="payment__form">
+                                <label>نوع پرداخت:</label>
+                                <select name="paymentType" >
+                                    <option value="کارتخوان" selected>کارتخوان</option>
+                                    <option value="کارت به کارت" >کارت به کارت</option>
+                                </select>
+                                <br>
+                                <label> سال تحصیلی :</label>
+                                <select name="years" >
+                                    
+                                </select>
+                                <br>
+                                <label> مبلغ پرداختی :</label>
+                                <input name="cost" type="number"  required>
+                                <br>
+                                <label class="cost1"></label>
+                                <label class="cost2">ریال</label>
+                                <br>
+                                <label>به عنوان تخفیف:</label>
+                                <input type="checkbox" name="discount">
+                                <br>
+                                <button class="submit">پرداخت</button>
+                            </form>
+                        </div>
+                        <div class="payment__chart">
+                            {{!-- <canvas id="cost8"></canvas> --}}
+                            <div class="summary">
+                                <label id="paid"></label>
+                                <label id="remain"></label>
+                            </div>
+                            <table id="payments_table">
+                                
+                                
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="teacher">
+                <div class="main__section">
+
+                    <div class="box newTeacher__box clear active">
+                        <div class="dashbord__label">
+                            <span class="title">تعریف معلم جدید</span>
+                        </div>
+                    </div>
+                   
+                    <div class="box teacherCourse__box clear">
+                        <div class="dashbord__label">
+                            <span class="title">تعریف معلم-درس</span>
+                        </div>
+                    </div>
+                   
+                    <div class="box teacherProfile__box clear">
+                        <div class="dashbord__label">
+                            <span class="title">پروفایل معلم</span>
+                        </div>
+                    </div>
+
+                    <div class="box teacherPayments__box clear">
+                        <div class="dashbord__label">
+                            <span class="title"> پرداختی ها </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="newTeacher__section">
+                    <form class="form1 teacherForm documents">
+                        <label>نام </label>
+                        <input type="text" name="firstName" required>
+                        <br>
+                        <label>نام خانوادگی </label>
+                        <input type="text" name="lastName" required>
+                        <br>
+                        <label>کد ملی</label>
+                        <input type="text" name="nationalID" required>
+                        <br>
+                        <label>شماره همراه</label>
+                        <input type="text" name="mobileNumber" required>
+                        <br>
+                        <label for="myfile">انتخاب عکس پروفایل </label>
+                        <input type="file" value="image" name="image" accept=".gif, .jpg, .jfif, .png, .jpeg" >
+                        <br>
+                        <p></p>
+                        <button class="submit-btn" type="submit" >ارسال</button>
+                        <button class="teamMember__update__btn submit-btn" ><a href="#" class="find"> بروز رسانی <i class="fas fa-pen-alt"></i></a></button>
+                        <button class="teamMember__reset__btn submit-btn" ><a href="#" class="close"> انصراف <i class="fas fa-times fa-cancel"></i></a></button>
+
+                    </form>
+                </div>
+                <div class="teacherCourse__section">
+                    <div class="search__tools">
+                        <div class="search__box">
+                            <input type="text" class="input__search" placeholder="جستجوی معلم ">
+                            <a href="#" class="find"><i class="fas fa-search fa-lg"></i></a>
+                        </div>
+
+                        <select>
+                            <option value="lastName" selected>نام خانوادگی</option>
+                            <option value="nationalID" >کد ملی</option>
+                        </select>
+                    </div>
+                    <table>
+
+                    </table>
+                    <div class="pagination">
+                        <div class="first"></div>
+                         
+                        <div class="pages"></div>
+                        
+                        <div class="last"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <hr>
+                    <form class="form1 teacherCourseForm documents">
+                        <label>پایه</label>
+                        <select name="gradeSelector">
+                            <option value="اول" selected>اول</option>
+                            <option value="دوم">دوم</option>
+                            <option value="سوم">سوم</option>
+                            <option value="چهارم">چهارم</option>
+                            <option value="پنجم">پنجم</option>
+                            <option value="ششم">ششم</option>
+                           
+                        </select>
+                        <br>
+                        <label class="title">نام </label>
+                        <input type="text" name="firstName" readonly>
+                        <br>
+                        <label class="title">نام خانوادگی </label>
+                        <input type="text" name="lastName" readonly>
+                        <br>
+                        <label class="title">سال تحصیلی جاری:</label>
+                        <input type="text" name="year" readonly>
+                        <br>
+                        <p>لطفا دروس مورد نظر را انتخاب کنید</p>
+                        <div class="course__container">
+
+                        </div>
+                        <br>
+                        <br>
+                        <button class="submit-btn" type="submit" >ارسال</button>
+                        <button class="teamMember__update__btn submit-btn" ><a href="#" class="find"> بروز رسانی <i class="fas fa-pen-alt"></i></a></button>
+                        <button class="teamMember__reset__btn submit-btn" ><a href="#" class="close"> انصراف <i class="fas fa-times fa-cancel"></i></a></button>
+
+                    </form>
+                </div>
+                <div class="teacherProfile__section">
+                    <div class="search__tools">
+                        <div class="search__box">
+                            <input type="text" class="input__search" placeholder="جستجوی معلم ">
+                            <a href="#" class="find"><i class="fas fa-search fa-lg"></i></a>
+                        </div>
+
+                        <select>
+                            <option value="lastName" selected>نام خانوادگی</option>
+                            <option value="nationalID" >کد ملی</option>
+                        </select>
+                    </div>
+                    <table>
+
+                    </table>
+                    <div class="pagination">
+                        <div class="first"></div>
+                         
+                        <div class="pages"></div>
+                        
+                        <div class="last"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <hr>
+                    <div class="profile__container">
+                        <form class="form1 teacherProfileForm documents">
+                            <a href="#" class="changePassword" onclick="changeTeacherPassword(event)">تغییر رمز عبور معلم</a>
+                            <br>
+                            <img>
+                            <br>
+                            <label class="title">نام </label>
+                            <input type="text" name="firstName" readonly>
+                            <br>
+                            <label class="title">نام خانوادگی </label>
+                            <input type="text" name="lastName" readonly>
+                            <br>
+                            <label class="title">سال تحصیلی جاری:</label>
+                            <input type="text" name="year" readonly>
+                            <br>
+                            <p>دروس معلم در سال تحصیلی جاری:</p>
+                            <div class="course__container">
+
+                            </div>
+                            <br>
+                            <br>
+                            <button class="submit-btn" type="submit" >حذف دروس انتخابی</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="teacherPayments__section">
+                    
+                </div>
+            </div>
+            <div class="course">
+                <div class="newCourse">
+                    <form class="form1 courseForm documents">
+                        <p>تعریف درس جدید</p>
+                        <label>عنوان درس</label>
+                        <input type="text" name="name" required>
+                        <br>
+                        <label>پایه</label>
+                        <select name="grade">
+                            <option value="اول" selected>اول</option>
+                            <option value="دوم">دوم</option>
+                            <option value="سوم">سوم</option>
+                            <option value="چهارم">چهارم</option>
+                            <option value="پنجم">پنجم</option>
+                            <option value="ششم">ششم</option>
+                           
+                        </select>
+                        <br>
+                        
+                        <button class="submit-btn" type="submit" >ارسال</button>
+                        <button class="teamMember__update__btn submit-btn" ><a href="#" class="find"> بروز رسانی <i class="fas fa-pen-alt"></i></a></button>
+                        <button class="teamMember__reset__btn submit-btn" ><a href="#" class="close"> انصراف <i class="fas fa-times fa-cancel"></i></a></button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    
+    
+        <script src="./js/plugins/axios.min.js"></script>
+        <script src="./js/plugins/mustache.min.js"></script>
+        <script src="./js/plugins/felora.js"></script>
+        <script src="./js/plugins/persianDate.js"></script>
+        <script src="../js/plugins/spinner.js"></script>
+        <script src="../js/plugins/chart.js"></script>
+        <script src="./js/adminHome.js"></script>
+        <script src="./js/dashbord.js"></script>
+        <script src="./js/teacher.js"></script>
+        <script src="./js/course.js"></script>
+    </body>
+</html>
